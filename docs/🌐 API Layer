@@ -1,0 +1,18 @@
+The network layer is designed around Retrofit interfaces.
+
+interface OperationsApi {
+
+    @GET("work-orders")
+    suspend fun getWorkOrders(): WorkOrderResponse
+
+    @GET("work-orders/{id}")
+    suspend fun getWorkOrder(
+        @Path("id") id: String
+    ): WorkOrderResponse
+
+    @POST("work-orders/{id}/status")
+    suspend fun updateStatus(
+        @Path("id") id: String,
+        @Body request: StatusUpdateRequest
+    ): StatusResponse
+}
