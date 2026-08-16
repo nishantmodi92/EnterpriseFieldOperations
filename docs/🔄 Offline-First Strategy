@@ -1,0 +1,25 @@
+The application prioritizes local data availability.
+
+User Action
+     │
+     ▼
+ViewModel
+     │
+     ▼
+Use Case
+     │
+     ▼
+Repository
+     │
+     ├──────────────► Room
+     │                  │
+     │                  ▼
+     │              Local UI
+     │
+     └──────────────► Network
+                        │
+                        ▼
+                  Remote Server
+                        │
+                        ▼
+                     Room
