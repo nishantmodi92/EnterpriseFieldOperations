@@ -1,0 +1,23 @@
+Synchronization responsibilities are isolated from UI code.
+Network Available
+       │
+       ▼
+WorkManager
+       │
+       ▼
+Synchronization Worker
+       │
+       ▼
+Repository
+       │
+       ▼
+Remote API
+       │
+       ▼
+Validate Response
+       │
+       ▼
+Update Room
+       │
+       ▼
+UI Observes Flow
